@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { getGalleryById, addGuestbookEntry } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 const guestbookSchema = z.object({
   name: z.string().min(1, 'Name is required').max(50, 'Name is too long'),
   message: z.string().min(1, 'Message is required').max(500, 'Message is too long'),

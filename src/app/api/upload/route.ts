@@ -4,6 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import { getSession } from '@/lib/auth';
 
+export const dynamic = 'force-dynamic';
+
 // Configure Cloudinary only if credentials are set
 if (
   process.env.CLOUDINARY_CLOUD_NAME &&

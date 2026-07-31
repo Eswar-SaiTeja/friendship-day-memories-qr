@@ -3,6 +3,8 @@ import { z } from 'zod';
 import { getUserByEmail } from '@/lib/db';
 import { comparePassword, signToken } from '@/lib/auth';
 
+export const dynamic = 'force-dynamic';
+
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(1, 'Password is required')

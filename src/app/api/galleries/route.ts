@@ -3,6 +3,8 @@ import { z } from 'zod';
 import { getSession } from '@/lib/auth';
 import { createGallery, getGalleriesByCreator, getGalleryBySlug } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 const mediaSchema = z.object({
   url: z.string().min(1, 'Media URL is required'),
   publicId: z.string(),
