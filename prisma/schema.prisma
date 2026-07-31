@@ -1,0 +1,76 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String?
+  image         String?
+  role          String    @default("USER")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  galleries     Gallery[]
+}
+
+model Gallery {
+  id             String           @id @default(cuid())
+  slug           String           @unique
+  name           String
+  friendNames    String[]
+  description    String?
+  coverImage     String
+  theme          String           @default("default")
+  musicUrl       String?
+  privacy        String           @default("PUBLIC")
+  password       String?
+  expirationDate DateTime?
+  isEnabled      Boolean          @default(true)
+  viewCount      Int              @default(0)
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  creatorId      String
+  creator        User             @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  media          Media[]
+  guestbook      GuestbookEntry[]
+  scans          Scan[]
+}
+
+model Media {
+  id         String   @id @default(cuid())
+  url        String
+  publicId   String
+  type       String   // IMAGE or VIDEO
+  caption    String?
+  createdAt  DateTime @default(now())
+  galleryId  String
+  gallery    Gallery  @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+}
+
+model GuestbookEntry {
+  id        String   @id @default(cuid())
+  name      String
+  message   String
+  sticker   String?
+  createdAt DateTime @default(now())
+  galleryId String
+  gallery   Gallery  @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+}
+
+model Scan {
+  id        String   @id @default(cuid())
+  device    String?
+  browser   String?
+  os        String?
+  country   String?
+  city      String?
+  createdAt DateTime @default(now())
+  galleryId String
+  gallery   Gallery  @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+}

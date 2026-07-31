@@ -1,0 +1,48 @@
+{
+  "name": "temp-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "autoprefixer": "^10.5.4",
+    "bcryptjs": "^3.0.3",
+    "canvas-confetti": "^1.9.4",
+    "cloudinary": "^2.10.0",
+    "framer-motion": "^12.43.0",
+    "gsap": "^3.15.0",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^1.28.0",
+    "next": "16.2.12",
+    "postcss": "^8.5.25",
+    "qrcode": "^1.5.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-dropzone": "^19.1.1",
+    "react-hook-form": "^7.83.0",
+    "react-hot-toast": "^2.6.0",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-dropzone": "^4.2.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "prisma": "^5.22.0",
+    "typescript": "^5"
+  }
+}

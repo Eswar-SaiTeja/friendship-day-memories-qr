@@ -1,0 +1,250 @@
+{
+  "users": [
+    {
+      "id": "user-default-123",
+      "name": "Bestie Creator",
+      "email": "bestie@memories.com",
+      "password": "$2b$10$C440yitcHfVa5EAgdeBFZek003LBJd5ErcUBAkCiy81j2CV6.UWPe",
+      "image": null,
+      "role": "USER",
+      "createdAt": "2026-07-31T17:25:42.594Z"
+    },
+    {
+      "id": "user-superadmin-123",
+      "name": "Platform Super Admin",
+      "email": "superadmin@memories.com",
+      "password": "$2b$10$KLpBGZ0zgi.hltd2Ybvo0eucmhtwe1Hf2rejbuVXmxfXGtgk6lk/a",
+      "image": null,
+      "role": "SUPERADMIN",
+      "createdAt": "2026-07-31T17:25:42.595Z"
+    }
+  ],
+  "galleries": [
+    {
+      "id": "gallery-default-123",
+      "slug": "friendship-2026-DEMO",
+      "name": "Rachel & Bestie Memories ❤️",
+      "friendNames": [
+        "Rachel"
+      ],
+      "description": "{\"description\":\"Rachel, we have shared so many laughs, coffees, and late-night talks. Here is to our wonderful journey together!\",\"secretMessage\":\"Rachel, you are the Monica to my Rachel! I love you so much! Happy Friendship Day! 💖\",\"trivia\":{\"question\":\"Which TV show did we binge-watch together last summer?\",\"options\":[\"Friends\",\"Stranger Things\",\"The Office\",\"Brooklyn Nine-Nine\"],\"correctAnswer\":\"Friends\"}}",
+      "coverImage": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop",
+      "theme": "sunset",
+      "musicUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "privacy": "PUBLIC",
+      "password": null,
+      "expirationDate": null,
+      "isEnabled": true,
+      "viewCount": 15,
+      "createdAt": "2026-07-31T17:25:42.595Z",
+      "creatorId": "user-default-123",
+      "media": [
+        {
+          "id": "media-1",
+          "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+          "publicId": "local-demo-1",
+          "type": "IMAGE",
+          "caption": "Working together on our projects!",
+          "createdAt": "2026-07-31T17:25:42.595Z"
+        },
+        {
+          "id": "media-2",
+          "url": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?q=80&w=800&auto=format&fit=crop",
+          "publicId": "local-demo-2",
+          "type": "IMAGE",
+          "caption": "Sunset beach walk - best day ever.",
+          "createdAt": "2026-07-31T17:25:42.595Z"
+        }
+      ],
+      "guestbook": [
+        {
+          "id": "gb-1",
+          "name": "Rachel",
+          "message": "This is the most beautiful card I have ever received! You made me cry, thank you so much! ❤️",
+          "sticker": "❤️",
+          "createdAt": "2026-07-31T17:25:42.595Z"
+        }
+      ],
+      "scans": [
+        {
+          "id": "scan-1",
+          "device": "Mobile",
+          "browser": "Chrome",
+          "os": "Android",
+          "country": "US",
+          "city": "New York",
+          "createdAt": "2026-07-31T17:25:42.595Z"
+        }
+      ]
+    },
+    {
+      "id": "gallery-1785518912491-qmx7trq7y",
+      "slug": "friendship-2026-XJ78P",
+      "name": "trail",
+      "friendNames": [
+        "self"
+      ],
+      "description": "{\"description\":\"\",\"secretMessage\":\"Happy Friendship Day! You are my absolute best friend.\",\"trivia\":null}",
+      "coverImage": "/uploads/1785518853777-t11jpa0.jpeg",
+      "theme": "default",
+      "musicUrl": null,
+      "privacy": "PUBLIC",
+      "password": null,
+      "expirationDate": null,
+      "isEnabled": true,
+      "creatorId": "user-default-123",
+      "media": [
+        {
+          "id": "media-1785518912492-0",
+          "url": "/uploads/1785518877244-znpg12k.png",
+          "publicId": "local-1785518877244-znpg12k.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-1",
+          "url": "/uploads/1785518877273-msvwtrq.png",
+          "publicId": "local-1785518877273-msvwtrq.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-2",
+          "url": "/uploads/1785518877300-m8uozab.png",
+          "publicId": "local-1785518877300-m8uozab.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-3",
+          "url": "/uploads/1785518877340-esobak3.jpeg",
+          "publicId": "local-1785518877340-esobak3.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-4",
+          "url": "/uploads/1785518877374-rsu0und.png",
+          "publicId": "local-1785518877374-rsu0und.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-5",
+          "url": "/uploads/1785518877348-gev6dzm.png",
+          "publicId": "local-1785518877348-gev6dzm.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-6",
+          "url": "/uploads/1785518877359-7l9ivbq.png",
+          "publicId": "local-1785518877359-7l9ivbq.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-7",
+          "url": "/uploads/1785518877426-02pnjwy.jpeg",
+          "publicId": "local-1785518877426-02pnjwy.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-8",
+          "url": "/uploads/1785518877598-b6x6dfk.png",
+          "publicId": "local-1785518877598-b6x6dfk.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-9",
+          "url": "/uploads/1785518877532-dwbxx7o.png",
+          "publicId": "local-1785518877532-dwbxx7o.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-10",
+          "url": "/uploads/1785518877538-4xm1no1.png",
+          "publicId": "local-1785518877538-4xm1no1.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-11",
+          "url": "/uploads/1785518877511-tqyzacj.jpeg",
+          "publicId": "local-1785518877511-tqyzacj.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-12",
+          "url": "/uploads/1785518877522-fnftqqo.jpeg",
+          "publicId": "local-1785518877522-fnftqqo.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-13",
+          "url": "/uploads/1785518877624-gguw3oe.jpeg",
+          "publicId": "local-1785518877624-gguw3oe.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-14",
+          "url": "/uploads/1785518877608-ueowa6q.jpeg",
+          "publicId": "local-1785518877608-ueowa6q.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-15",
+          "url": "/uploads/1785518877613-5qrjs8e.jpeg",
+          "publicId": "local-1785518877613-5qrjs8e.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        },
+        {
+          "id": "media-1785518912492-16",
+          "url": "/uploads/1785518877637-w92zby6.png",
+          "publicId": "local-1785518877637-w92zby6.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T17:28:32.492Z"
+        }
+      ],
+      "viewCount": 1,
+      "createdAt": "2026-07-31T17:28:32.492Z",
+      "guestbook": [],
+      "scans": [
+        {
+          "device": "Desktop",
+          "browser": "Chrome",
+          "os": "Windows",
+          "country": "Local Dev",
+          "city": "Local Dev",
+          "id": "scan-1785518951699-noyj69dem",
+          "createdAt": "2026-07-31T17:29:11.699Z"
+        }
+      ]
+    }
+  ]
+}
