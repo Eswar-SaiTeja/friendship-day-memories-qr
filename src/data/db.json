@@ -19,5 +19,103 @@
       "createdAt": "2026-07-31T17:25:42.595Z"
     }
   ],
-  "galleries": []
+  "galleries": [
+    {
+      "id": "gallery-1785524769237-ezsiuakri",
+      "slug": "friendship-2026-MEHB0",
+      "name": "trail",
+      "friendNames": [
+        "rechal"
+      ],
+      "description": "{\"description\":\"\",\"secretMessage\":\"Happy Friendship Day! You are my absolute best friend.\",\"trivia\":null}",
+      "coverImage": "/uploads/1785524729516-vos522y.jpeg",
+      "theme": "default",
+      "musicUrl": null,
+      "privacy": "PUBLIC",
+      "password": null,
+      "expirationDate": null,
+      "isEnabled": true,
+      "creatorId": "user-default-123",
+      "media": [
+        {
+          "id": "media-1785524769237-0",
+          "url": "/uploads/1785524765350-bi4r9ek.png",
+          "publicId": "local-1785524765350-bi4r9ek.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-1",
+          "url": "/uploads/1785524765330-cl4orl6.jpeg",
+          "publicId": "local-1785524765330-cl4orl6.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-2",
+          "url": "/uploads/1785524765341-leyicvf.png",
+          "publicId": "local-1785524765341-leyicvf.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-3",
+          "url": "/uploads/1785524765397-7zs1n5s.png",
+          "publicId": "local-1785524765397-7zs1n5s.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-4",
+          "url": "/uploads/1785524765409-go8wf8a.png",
+          "publicId": "local-1785524765409-go8wf8a.png",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-5",
+          "url": "/uploads/1785524765463-za83j8v.jpeg",
+          "publicId": "local-1785524765463-za83j8v.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-6",
+          "url": "/uploads/1785524765431-d0e2h3d.jpeg",
+          "publicId": "local-1785524765431-d0e2h3d.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        },
+        {
+          "id": "media-1785524769237-7",
+          "url": "/uploads/1785524765439-o53qp11.jpeg",
+          "publicId": "local-1785524765439-o53qp11.jpeg",
+          "type": "IMAGE",
+          "caption": "",
+          "createdAt": "2026-07-31T19:06:09.237Z"
+        }
+      ],
+      "viewCount": 1,
+      "createdAt": "2026-07-31T19:06:09.237Z",
+      "guestbook": [],
+      "scans": [
+        {
+          "device": "Desktop",
+          "browser": "Chrome",
+          "os": "Windows",
+          "country": "Local Dev",
+          "city": "Local Dev",
+          "id": "scan-1785524792099-o0ugn7f1w",
+          "createdAt": "2026-07-31T19:06:32.099Z"
+        }
+      ]
+    }
+  ]
 }

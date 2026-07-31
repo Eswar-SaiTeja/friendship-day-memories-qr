@@ -324,19 +324,17 @@ export default function SuperadminPanel() {
   const totalGalleriesCount = galleries.length;
   const totalScansCount = galleries.reduce((acc, curr) => acc + (curr.viewCount || 0), 0);
 
-  if (authLoading || loading) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex justify-center items-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-pink-500"></div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-slate-950 text-white pb-16">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
+        {authLoading || loading ? (
+          <div className="flex justify-center items-center h-[50vh]">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-pink-500"></div>
+          </div>
+        ) : (
+          <>
         
         {/* Panel Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
@@ -683,6 +681,8 @@ export default function SuperadminPanel() {
               </table>
             </div>
           </div>
+        )}
+        </>
         )}
 
       </div>
