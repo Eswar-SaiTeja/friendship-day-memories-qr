@@ -127,3 +127,26 @@ export function dbAddScan(galleryId: string, scan: Scan): Scan | null {
   writeDb(db);
   return scan;
 }
+
+export function dbUpdateUser(id: string, updatedFields: Partial<User>): User | null {
+  const db = readDb();
+  const index = db.users.findIndex(u => u.id === id);
+  if (index === -1) return null;
+
+  db.users[index] = {
+    ...db.users[index],
+    ...updatedFields
+  };
+
+  writeDb(db);
+  return db.users[index];
+}
+
+export function dbDeleteUser(id: string): boolean {
+  const db = readDb();
+  const initialLength = db.users.length;
+  db.users = db.users.filter(u => u.id !== id);
+  db.galleries = db.galleries.filter(g => g.creatorId !== id);
+  writeDb(db);
+  return db.users.length < initialLength;
+}

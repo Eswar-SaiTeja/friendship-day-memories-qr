@@ -441,3 +441,100 @@ export async function getAllUsers(): Promise<(User & { galleryCount: number })[]
     };
   });
 }
+
+export async function updateUser(id: string, userData: Partial<User>): Promise<User | null> {
+  if (prisma) {
+    try {
+      const user = await prisma.user.update({
+        where: { id },
+        data: {
+          name: userData.name,
+          email: userData.email?.toLowerCase(),
+          password: userData.password,
+          role: userData.role
+        }
+      });
+      return mapPrismaUser(user);
+    } catch (error) {
+      console.error('Prisma updateUser error, falling back to JSON:', error);
+    }
+  }
+  return jsonDb.dbUpdateUser(id, userData);
+}
+
+export async function deleteUser(id: string): Promise<boolean> {
+  if (prisma) {
+    try {
+      await prisma.gallery.deleteMany({
+        where: { creatorId: id }
+      });
+      await prisma.user.delete({
+        where: { id }
+      });
+      return true;
+    } catch (error) {
+      console.error('Prisma deleteUser error, falling back to JSON:', error);
+    }
+  }
+  return jsonDb.dbDeleteUser(id);
+}
+
+export async function getAllGalleries(): Promise<Gallery[]> {
+  if (prisma) {
+    try {
+      const galleries = await prisma.gallery.findMany({
+        include: {
+          media: true,
+          guestbook: true,
+          scans: true
+        },
+        orderBy: { createdAt: 'desc' }
+      });
+      return galleries.map(mapPrismaGallery);
+    } catch (error) {
+      console.error('Prisma getAllGalleries error, falling back to JSON:', error);
+    }
+  }
+  const db = jsonDb.readDb();
+  return db.galleries;
+}
+
+export async function deleteGuestbookEntryAdmin(galleryId: string, entryId: string): Promise<boolean> {
+  if (prisma) {
+    try {
+      await prisma.guestbookEntry.delete({
+        where: { id: entryId }
+      });
+      return true;
+    } catch (error) {
+      console.error('Prisma deleteGuestbookEntryAdmin error, falling back to JSON:', error);
+    }
+  }
+  const db = jsonDb.readDb();
+  const gallery = db.galleries.find(g => g.id === galleryId);
+  if (!gallery) return false;
+  const initialLength = gallery.guestbook.length;
+  gallery.guestbook = gallery.guestbook.filter(e => e.id !== entryId);
+  jsonDb.writeDb(db);
+  return gallery.guestbook.length < initialLength;
+}
+
+export async function deleteMediaAdmin(galleryId: string, mediaId: string): Promise<boolean> {
+  if (prisma) {
+    try {
+      await prisma.media.delete({
+        where: { id: mediaId }
+      });
+      return true;
+    } catch (error) {
+      console.error('Prisma deleteMediaAdmin error, falling back to JSON:', error);
+    }
+  }
+  const db = jsonDb.readDb();
+  const gallery = db.galleries.find(g => g.id === galleryId);
+  if (!gallery) return false;
+  const initialLength = gallery.media.length;
+  gallery.media = gallery.media.filter(m => m.id !== mediaId);
+  jsonDb.writeDb(db);
+  return gallery.media.length < initialLength;
+}
